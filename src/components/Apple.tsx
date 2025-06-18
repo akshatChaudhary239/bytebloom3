@@ -11,7 +11,7 @@ export default function AppleCardsCarouselDemo() {
   return (
     <div className="w-full h-full bg-black py-20">
       <h2 className="max-w-7xl text-center pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-50 dark:text-neutral-200 font-sans">
-        About our services
+        About our services and jobs
       </h2>
       <Carousel items={cards} />
     </div>
