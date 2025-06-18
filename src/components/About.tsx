@@ -1,8 +1,9 @@
 
 "use client"
-import Link from "next/link";
+// import Link from "next/link";
+import { FaCogs, FaChartBar, FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+
 import Apple from "./Apple";
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -21,24 +22,27 @@ const itemVariants = {
 };
 
 
-const cardData = [
+const cards = [
   {
-    title: "Sured digital growth",
-    description: "ByteBloom helps startupsand small businesses grow online combining branding, social media strategy, content creation, and digital marketing into one powerful service.",
-    link: "#contact",
-    cta: "Explore →",
+    icon: <FaCogs className="text-4xl text-[#00c6ff]" />,
+    title: "Advanced Tech Stack",
+    description:
+      "Built with the latest frameworks and tools like Next.js, Tailwind CSS, and secure APIs for performance-driven results.",
+    glow: "hover:shadow-[0_0_25px_#00c6ff]",
   },
   {
-    title: "Custom SaaS MVP Development for Startups",
-    description: "Build minimum viable products (MVPs) for entrepreneurs  fast, scalable, and ready to pitch to investors or validate ideas into the future of the world",
-    link: "#contact",
-    cta: "Explore →",
+    icon: <FaChartBar className="text-4xl text-[#38ef7d]" />,
+    title: "Growth-Oriented Design",
+    description:
+      "Every interface is crafted to engage users and drive conversions through intuitive, scalable digital experiences.",
+    glow: "hover:shadow-[0_0_25px_#38ef7d]",
   },
   {
-    title: "AI Tools & Automation Studio",
-    description: "Offer customized automation solutions and AI-driven tools that help businesses save time, improve efficiency, and unlock smarter workflows",
-    link: "#contact ",
-    cta: "Explore →",
+    icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
+    title: "24/7 Support & Security",
+    description:
+      "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
+    glow: "hover:shadow-[0_0_25px_#9b5de5]",
   },
 ];
 
@@ -67,41 +71,34 @@ export default function AboutPage() {
       </section>
 
       {/* Mission, Vision, Values */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6">
-      {cardData.map((card, index) => (
-        <CardContainer key={index} className="inter-var">
-          <CardBody className="bg-gradient-to-tr from-blue-950 to-neutral-950  border-white relative group/card  hover:shadow-[inset_0px_5px_15px_-3px_rgba(0,_0,_0,_0.2)] dark:bg-black dark:border-white/[0.2]  w-auto sm:w-[20rem] h-auto rounded-xl p-6 border transition-all duration-300 ease-in-out">
-            <CardItem
-              translateZ="50"
-              className="text-xl font-bold text-neutral-50 dark:text-white"
-            >
-              {card.title}
-            </CardItem>
-            <CardItem
-              as="p"
-              translateZ="60"
-              className="text-neutral-500 text-xl max-w-sm mt-2 dark:text-neutral-300"
-            >
-              {card.description}
-            </CardItem>
+          <div className="py-20 px-6 md:px-20 bg-[#0f0f0f] text-white">
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-[#00c6ff] via-[#38ef7d] to-[#9b5de5] bg-clip-text text-transparent">
+        Why Choose ByteBloom?
+      </h2>
 
-            <div className="flex justify-between items-center mt-16">
-              <CardItem
-                translateZ={20}
-                as="a"
-                href={card.link}
-                target="_blank"
-                className="px-4 py-2 rounded-lg  text-xs font-normal bg-white p-1 text-black hover:bg-gray-100"
-              >
-                <Link href="#contact">
-                  {card.cta}</Link>
-              
-              </CardItem>
-              
+      <div className="grid md:grid-cols-3 gap-10">
+        {cards.map((card, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.2,
+              ease: "easeOut",
+            }}
+            className={`bg-[#1a1a1a]/70 backdrop-blur-md border border-gray-800 rounded-2xl p-6 shadow-xl transition-all duration-300 ${card.glow}`}
+          >
+            <div className="flex flex-col items-center text-center gap-4">
+              {card.icon}
+              <h3 className="text-xl font-semibold">{card.title}</h3>
+              <p className="text-sm text-gray-300">{card.description}</p>
             </div>
-          </CardBody>
-        </CardContainer>
-      ))}
+          </motion.div>
+        ))}
+      </div>
     </div>
 
       {/* Services Section */}
