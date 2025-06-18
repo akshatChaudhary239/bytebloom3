@@ -1,9 +1,10 @@
 import About from "@/components/About";
 import Navbar from "../components/Navbar";
 import Banner from "@/components/Banner";
-import Apple from "../components/Apple"
+// import Apple from "../components/Apple"
 import Contact from "@/components/Contact";
 import PricingSection from "@/components/Pricing";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
       <section id="about" className="min-h-screen">
        <About/>
       </section>
-<Apple/>
+
 
 
       <section id="pricing" className="min-h-screen ">
@@ -26,6 +27,7 @@ export default function Home() {
       <section id="contact" className="min-h-screen">
        <Contact/>
       </section>
+      <Footer/>
     </div>
    </>
   );

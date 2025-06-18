@@ -1,4 +1,3 @@
-// app/components/PricingSection.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -13,20 +12,22 @@ const pricingPlans = [
       "Basic website builder",
       "Free templates",
       "Email support",
-      "1 custom domain"
+      "1 custom domain",
     ],
+    tag: "Entry Level",
     highlight: false,
   },
   {
     title: "Pro",
     price: "$49",
     features: [
-      "Advanced builder with AI",
+      "AI-enhanced builder",
       "Premium templates",
       "Priority support",
       "3 custom domains",
-      "SEO & speed optimization"
+      "SEO optimization",
     ],
+    tag: "Most Popular",
     highlight: true,
   },
   {
@@ -37,84 +38,115 @@ const pricingPlans = [
       "Custom animations",
       "Figma-to-code conversion",
       "Dedicated success manager",
-      "Custom integrations"
+      "Custom integrations",
     ],
+    tag: "Enterprise",
     highlight: false,
-  }
+  },
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 80 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
       delay: i * 0.3,
-      duration: 0.6,
+      duration: 0.7,
       type: "spring",
-      stiffness: 80,
+      stiffness: 100,
     },
   }),
 };
 
 const PricingSection = () => {
   return (
-    <section className="relative bg-[#0e0f1a] text-white py-24 px-4 sm:px-8 md:px-20 lg:px-32 overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full z-0 bg-gradient-to-tr from-cyan-900/20 to-purple-900/10 blur-3xl animate-pulse"></div>
+    <section className="relative bg-[#0b0f1f] text-white py-28 px-6 sm:px-10 md:px-20 lg:px-32 overflow-hidden">
+      {/* Floating Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute w-[600px] h-[600px] bg-cyan-400/20 blur-3xl rounded-full top-[-200px] left-[-200px] animate-pulse"></div>
+        <div className="absolute w-[400px] h-[400px] bg-purple-500/10 blur-2xl rounded-full bottom-[-100px] right-[-150px] animate-ping"></div>
+      </div>
+
+      {/* Header */}
       <div className="relative z-10 text-center mb-20">
         <motion.h2
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl  font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
         >
-          ByteBloom Pricing Plans
+          Choose Your Plan
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="mt-5 text-lg text-gray-400"
+          className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto"
         >
-          Choose the plan that fits your digital journey.
+          Crafted for creators, startups, and enterprises with futuristic goals.
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+      {/* Pricing Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
         {pricingPlans.map((plan, index) => (
           <motion.div
             key={index}
+            custom={index}
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            custom={index}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.07 }}
-            className={`relative rounded-2xl p-10 shadow-xl backdrop-blur-lg bg-gradient-to-br from-[#1e1f2f] to-[#16171f] border ${
-              plan.highlight ? "border-cyan-400 shadow-cyan-500/30" : "border-gray-700"
-            } transition-transform duration-500`}
+            whileHover={{ scale: 1.05 }}
+            className={`relative group rounded-3xl border backdrop-blur-lg bg-gradient-to-br from-[#1a1c2b] to-[#11121a] p-10 transition-all duration-500 shadow-2xl ${
+              plan.highlight
+                ? "border-cyan-400 ring-2 ring-cyan-500 shadow-cyan-400/30"
+                : "border-gray-700"
+            }`}
           >
-            <div className="absolute -top-4 right-4 w-20 h-20 bg-cyan-500/10 rounded-full blur-2xl animate-pulse"></div>
-            <h3 className="text-2xl font-bold mb-4 text-cyan-300 tracking-wide">
-              {plan.title}
-            </h3>
-            <p className="text-5xl font-extrabold mb-6 text-white">
-              {plan.price}<span className="text-base font-medium text-gray-400">/month</span>
+            {/* Glow on Hover */}
+            <div className="absolute inset-0 bg-cyan-400/10 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none"></div>
+
+            {/* Tag Badge */}
+            <div className="absolute -top-4 left-5 bg-gradient-to-r from-purple-500 to-cyan-500 text-xs px-4 py-1 rounded-full font-semibold shadow-md">
+              {plan.tag}
+            </div>
+
+            {/* Title */}
+            <h3 className="text-2xl font-bold mb-4 text-cyan-300">{plan.title}</h3>
+
+            {/* Price */}
+            <p className="text-5xl font-extrabold mb-6">
+              {plan.price}
+              <span className="text-sm font-medium text-gray-400"> /month</span>
             </p>
+
+            {/* Features */}
             <ul className="space-y-4">
               {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center text-gray-300">
-                  <CheckCircle2 className="w-5 h-5 text-cyan-400 mr-3" />
-                  <span className="text-base">{feature}</span>
+                <li key={i} className="flex items-start text-gray-300">
+                  <CheckCircle2 className="w-5 h-5 text-cyan-400 mr-3 mt-1" />
+                  <span>{feature}</span>
                 </li>
               ))}
             </ul>
+
+            {/* Button */}
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="mt-8 w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 rounded-xl transition-all"
+              whileHover={{
+                backgroundPosition: "right center",
+                transition: { duration: 0.5 },
+              }}
+              className={`mt-8 w-full py-3 font-semibold rounded-xl text-white transition-all bg-gradient-to-r ${
+                plan.highlight
+                  ? "from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 shadow-cyan-400/30"
+                  : "from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700"
+              }`}
             >
-              {plan.highlight ? "Most Popular" : "Choose Plan"}
+              {plan.highlight ? "Launch with Pro 🚀" : "Choose Plan"}
             </motion.button>
           </motion.div>
         ))}

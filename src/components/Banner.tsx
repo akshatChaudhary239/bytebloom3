@@ -26,12 +26,13 @@ export default function AuroraBackgroundDemo() {
               words={["Content writing", "Website development", "Social media handeling",]} className=" text-2xl bg-white"
             />
 
-  <p className="mt-4 text-xl text-slate-50 dark:text-slate-300 max-w-2xl mx-auto">
-“Empowering Brands to Bloom in the Digital World”
-<br />
- Ready to grow? Let’s build your digital future together.
+  <p className="mt-4 text-xl text-slate-50 dark:text-slate-300 italic max-w-2xl mx-auto">
+ We build beautiful products with the latest technologies and frameworks.
+ <br />
+        We are a team of passionate developers and designers that love to build
+        amazing products.
   </p>
-  <Link  href="#contact" className="mt-6 px-6 py-3 font-semibold bg-gradient-to-r from-zinc-600 to-zinc-300 hover:bg-amber-300  text-black rounded-xl shadow-lg">
+  <Link  href="#pricing" className="mt-6 px-6 py-3 font-semibold bg-gradient-to-r from-zinc-600 to-zinc-300 hover:bg-amber-300  text-black rounded-xl shadow-lg">
     Let&apos;s Get Started
   </Link>
       </motion.div>
