@@ -5,6 +5,8 @@ import Banner from "@/components/Banner";
 import Contact from "@/components/Contact";
 import PricingSection from "@/components/Pricing";
 import Footer from "@/components/Footer";
+// import Flipper from "@/components/Flipper";
+
 
 
 export default function Home() {
@@ -14,6 +16,7 @@ export default function Home() {
      
 <Navbar/>
 <Banner/>
+
       <section id="about" className="min-h-screen">
        <About/>
       </section>
