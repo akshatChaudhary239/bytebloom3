@@ -31,19 +31,19 @@ const teamMembers = [
   {
     name: "Sundram Singh",
     role: "Lead Designer",
-    image: "/team/sundram.jpg",
+    image: "/team/priya.jpg",
     bio: "Blending creativity with user-centric design. Priya crafts seamless experiences with a futuristic edge.",
   },
   {
     name: "Sumaiya khan",
     role: "Full Stack Developer",
-    image: "/team/sumaiya.jpg",
+    image: "/team/rohan.jpg",
     bio: "Tech wizard turning ideas into scalable digital systems using MERN, Next.js, and Web3.",
   },
   {
-    name: "Naman Dhounchak",
+    name: "Naman dhounchak",
     role: "Full Stack Developer",
-    image: "/team/naman.jpg",
+    image: "/team/rohan.jpg",
     bio: "Tech wizard turning ideas into scalable digital systems using MERN, Next.js, and Web3.",
   },
 ];
