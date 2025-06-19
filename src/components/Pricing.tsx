@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import React from "react";
 
@@ -45,7 +45,8 @@ const pricingPlans = [
   },
 ];
 
-const cardVariants = {
+// ✅ Fix: Typed as Variants with custom function and spring type
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 80 },
   visible: (i: number) => ({
     opacity: 1,
@@ -53,7 +54,7 @@ const cardVariants = {
     transition: {
       delay: i * 0.3,
       duration: 0.7,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100,
     },
   }),
@@ -115,7 +116,9 @@ const PricingSection = () => {
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl font-bold mb-4 text-cyan-300">{plan.title}</h3>
+            <h3 className="text-2xl font-bold mb-4 text-cyan-300">
+              {plan.title}
+            </h3>
 
             {/* Price */}
             <p className="text-5xl font-extrabold mb-6">
