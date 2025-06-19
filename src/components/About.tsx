@@ -5,7 +5,7 @@ import { FaCogs, FaChartBar, FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import Apple from "./Apple";
-import Flipper from "./Flipper";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -70,7 +70,7 @@ export default function AboutPage() {
           Empowering brands to bloom in the digital world with futuristic websites, result-driven marketing, and a magnetic social presence.
         </motion.p>
       </section>
-<Flipper/>
+
       {/* Mission, Vision, Values */}
           <div className="py-20 px-6 md:px-20 bg-[#0f0f0f] text-white">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-[#00c6ff] via-[#38ef7d] to-[#9b5de5] bg-clip-text text-transparent">
