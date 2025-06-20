@@ -120,7 +120,7 @@ export default function Apple() {
                 onClick={() => setOpenIndex(null)}
                 className="mt-6 gap-10 text-cyan-300 hover:text-white border border-cyan-300 px-3 py-1.5 rounded-lg transition"
               >
-                More
+              Connect
               </Link>
             </motion.div>
           </>
