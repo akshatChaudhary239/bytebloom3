@@ -64,12 +64,12 @@ export default function AuroraBackgroundDemo() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4 py-24"
       >
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zinc-300 to-white bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zinc-400 to-white inline-block bg-clip-text text-transparent">
           Bytebloom
         </h1>
 
         {/* ✅ Flipping Text Inline */}
-        <div className="text-center text-white text-2xl sm:text-4xl md:text-5xl font-bold h-[80px] overflow-hidden drop-shadow-xl my-4">
+        <div className="text-center text-gray-500 text-2xl sm:text-4xl md:text-5xl font-bold h-[80px] overflow-hidden drop-shadow-xl ">
           <AnimatePresence mode="wait">
             <motion.div
               key={allowedTexts[index]}
@@ -84,7 +84,7 @@ export default function AuroraBackgroundDemo() {
           </AnimatePresence>
         </div>
 
-        <p className="mt-4 text-xl text-slate-50 dark:text-slate-300 italic max-w-2xl mx-auto text-center">
+        <p className=" text-xl text-slate-50 dark:text-slate-300 italic max-w-2xl mx-auto text-center">
           We build beautiful products with the latest technologies and frameworks.
           <br />
           Our team of passionate developers and designers loves building amazing products.
@@ -92,7 +92,7 @@ export default function AuroraBackgroundDemo() {
 
         <Link
           href="#pricing"
-          className="mt-6 px-6 py-3 font-semibold bg-gradient-to-r from-zinc-600 to-zinc-300 hover:from-zinc-700 hover:to-zinc-400 text-black rounded-xl shadow-lg transition"
+          className="mt-6 px-6 py-3 font-semibold bg-gradient-to-r from-zinc-600 to-zinc-300 inline-block hover:from-zinc-700 hover:to-zinc-400 text-black rounded-xl shadow-lg transition"
         >
           Let&apos;s Get Started
         </Link>

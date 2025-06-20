@@ -23,7 +23,7 @@ export default function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-800 to-white text-white shadow-md">
+    <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-800 to-white text-white  shadow-md">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
