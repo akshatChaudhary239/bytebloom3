@@ -25,25 +25,25 @@ const teamMembers = [
   {
     name: "Akku Chaudhary",
     role: "Founder & CEO",
-    image: "/team/akku.jpg", // Replace with your actual image path
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg", // Replace with your actual image path
     bio: "Visionary behind ByteBloom. Passionate about web innovation, AI, and creating products that solve real-world problems.",
   },
   {
     name: "Sundram Singh",
     role: "Lead Designer",
-    image: "/team/priya.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg",
     bio: "Blending creativity with user-centric design. Priya crafts seamless experiences with a futuristic edge.",
   },
   {
     name: "Sumaiya khan",
     role: "Full Stack Developer",
-    image: "/team/rohan.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg",
     bio: "Tech wizard turning ideas into scalable digital systems using MERN, Next.js, and Web3.",
   },
   {
     name: "Naman dhounchak",
     role: "Full Stack Developer",
-    image: "/team/rohan.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg",
     bio: "Tech wizard turning ideas into scalable digital systems using MERN, Next.js, and Web3.",
   },
 ];
@@ -83,33 +83,78 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="py-24 px-6 md:px-20 text-center">
         <div className="min-h-screen bg-transparent text-white px-6 py-12">
+     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[60vw] h-[60vw] bg-teal-400/10 blur-[180px] rounded-full pointer-events-none" />
+
+      {/* Intro */}
       <motion.div
-        className="max-w-5xl mx-auto text-center"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        className="max-w-4xl mx-auto text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.7 }}
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
           About <span className="text-teal-400">ByteBloom</span>
         </h1>
-        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-          ByteBloom started as a spark of innovation in the heart of a passionate developer. What began as a one-person mission to blend design and tech has grown into a digital powerhouse focused on delivering sleek, scalable, and future-forward web solutions.
+        <p className="text-lg text-gray-300 leading-relaxed">
+          ByteBloom is a digital innovation studio transforming businesses through purposeful design, scalable technology, and frictionless user experiences.
         </p>
       </motion.div>
 
+      {/* Core Section */}
       <motion.div
-        className="max-w-4xl mx-auto mt-12"
+        className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mt-20"
         initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.7 }}
       >
-        <h2 className="text-3xl font-bold mb-6 text-teal-300">Our Journey</h2>
-        <p className="text-gray-300 text-base leading-relaxed">
-          From humble beginnings in a small workspace, ByteBloom emerged during the Web3 revolution, carving its niche by blending modern UI/UX, responsive development, and scalable backend systems. 
-          Over the years, our team expanded with creative minds and problem-solvers, all united under a shared mission — <span className="text-white font-semibold">to innovate fearlessly</span>.
-          <br />
-          <br />
-          We’ve built digital products for startups, helped businesses scale, and educated communities through tech. Our stack? Next.js, Tailwind CSS, Framer Motion, MongoDB, Express — the best tools to power the digital era.
+        {/* Text Content */}
+        <div>
+          <h2 className="text-2xl md:text-3xl font-semibold text-teal-300 mb-4">
+            Our journey
+          </h2>
+          <p className="text-gray-300 text-base leading-loose mb-6">
+            Born in the Web3 wave, ByteBloom began as a solo venture with a mission: build digital products that are not only functional — but stunning.
+            From startup MVPs to enterprise dashboards, we&apos;ve empowered brands to scale, automate, and connect.
+          </p>
+          <ul className="space-y-3 text-gray-200 text-sm">
+            <li>✅ Clean, scalable frontends (Next.js + Tailwind)</li>
+            <li>✅ Intuitive UX design with performance-first logic</li>
+            <li>✅ Custom backend systems using Node.js & MongoDB</li>
+            <li>✅ Strategic digital presence via SEO & SMM</li>
+          </ul>
+        </div>
+
+        {/* Visual / Feature Card */}
+        {/* <div className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-6 shadow-xl hover:shadow-teal-500/20 transition-all duration-300">
+          <h3 className="text-xl font-semibold mb-4 text-white">Our Tech Stack</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-white/80">
+            {["Next.js", "Tailwind CSS", "Framer Motion", "MongoDB", "Express.js", "Vercel"].map((tech) => (
+              <span
+                key={tech}
+                className="bg-teal-500/20 py-1.5 rounded text-center hover:bg-teal-600/30 transition"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div> */}
+      </motion.div>
+
+      {/* Vision Statement */}
+      <motion.div
+        className="max-w-4xl mx-auto mt-24 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          Our Mission
+        </h2>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          To empower brands, creators, and startups through beautifully engineered solutions. At ByteBloom, every pixel and function is deliberate — driving growth, engagement, and elegance.
         </p>
       </motion.div>
 

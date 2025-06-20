@@ -108,20 +108,23 @@ export default function Apple() {
               exit={{ opacity: 0, scale: 0.85 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="flex items-center justify-between gap-4 mb-6">
-                <div className="text-5xl text-cyan-400">{services[openIndex].icon}</div>
-                <h2 className="text-2xl font-bold">{services[openIndex].title}</h2>
-              </div>
-              <p className="text-gray-200 text-lg leading-relaxed">
-                {services[openIndex].description}
-              </p>
-              <Link 
-              href="#contact"
-                onClick={() => setOpenIndex(null)}
-                className="mt-6 gap-10 text-cyan-300 hover:text-white border border-cyan-300 px-3 py-1.5 rounded-lg transition"
-              >
-              Connect
-              </Link>
+              <div className="flex flex-col items-center text-center gap-4 mb-6">
+  <div className="text-5xl text-cyan-400">{services[openIndex].icon}</div>
+  <h2 className="text-2xl font-bold">{services[openIndex].title}</h2>
+</div>
+
+<p className="text-gray-200 text-lg leading-relaxed text-center">
+  {services[openIndex].description}
+</p>
+
+<Link 
+  href="#contact"
+  onClick={() => setOpenIndex(null)}
+  className="mt-6 inline-block text-cyan-300 hover:text-white border border-cyan-300 px-4 py-2 rounded-lg transition"
+>
+  Connect
+</Link>
+
             </motion.div>
           </>
         )}
