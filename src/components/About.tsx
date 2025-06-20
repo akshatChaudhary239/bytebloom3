@@ -129,7 +129,7 @@ export default function AboutPage() {
               className="bg-[#1e293b] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden">
+              <div className="w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
