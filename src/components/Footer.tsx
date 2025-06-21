@@ -9,7 +9,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-tr from-[#0f172a] via-[#0a192f] to-[#020617] text-white pt-10 pb-5 px-6">
+    <footer className="bg-gradient-to-tr from-gray-900 to-gray-700 text-white pt-10 pb-5 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 border-b border-white/10 pb-8">
         
         {/* Company Info */}

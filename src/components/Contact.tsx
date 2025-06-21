@@ -107,7 +107,7 @@ export default function ContactSection() {
             </div>
             <div className="bg-[#111827] p-4 rounded-md flex items-center gap-4">
               <FaPhoneAlt className="text-blue-400 text-xl" />
-              <span className="text-gray-300">+91 9350637421</span>
+              <span className="text-gray-300">+91 9350637421 , +91 8570810577</span>
             </div>
             <div className="bg-[#111827] p-4 rounded-md flex items-center gap-4">
               <FaMapMarkerAlt className="text-blue-400 text-xl" />
@@ -118,7 +118,7 @@ export default function ContactSection() {
               <p className="mb-3 font-medium">Follow Us</p>
               <div className="flex space-x-5 text-2xl">
                 <a
-                  href="https://instagram.com/yourusername"
+                  href="https://instagram.com/_akkuchaudhary"
                   className="text-pink-500 hover:scale-110 transition-transform"
                   target="_blank"
                 >
@@ -132,7 +132,7 @@ export default function ContactSection() {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="mailto:hello@bytebloom.dev"
+                  href="https://mail.google.com/in/chaudharyakshat239@gmail.com"
                   className="text-red-400 hover:scale-110 transition-transform"
                 >
                   <FaEnvelope />
