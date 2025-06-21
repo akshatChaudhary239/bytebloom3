@@ -45,7 +45,6 @@ const pricingPlans = [
   },
 ];
 
-// ✅ Fix: Typed as Variants with custom function and spring type
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 80 },
   visible: (i: number) => ({
@@ -62,11 +61,11 @@ const cardVariants: Variants = {
 
 const PricingSection = () => {
   return (
-    <section className="relative bg-[#0b0f1f] text-white py-28 px-6 sm:px-10 md:px-20 lg:px-32 overflow-hidden">
+    <section className="relative bg-neutral-950 text-white py-28 px-6 sm:px-10 md:px-20 lg:px-32 overflow-hidden">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute w-[600px] h-[600px] bg-cyan-400/20 blur-3xl rounded-full top-[-200px] left-[-200px] animate-pulse"></div>
-        <div className="absolute w-[400px] h-[400px] bg-purple-500/10 blur-2xl rounded-full bottom-[-100px] right-[-150px] animate-ping"></div>
+        <div className="absolute w-[600px] h-[600px] bg-cyan-500/10 blur-3xl rounded-full top-[-250px] left-[-200px] animate-pulse" />
+        <div className="absolute w-[400px] h-[400px] bg-purple-700/10 blur-2xl rounded-full bottom-[-100px] right-[-150px] animate-ping" />
       </div>
 
       {/* Header */}
@@ -76,7 +75,7 @@ const PricingSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-zinc-600 to-zinc-200 inline-block bg-clip-text text-transparent"
         >
           Choose Your Plan
         </motion.h2>
@@ -101,17 +100,17 @@ const PricingSection = () => {
             whileInView="visible"
             viewport={{ once: true }}
             whileHover={{ scale: 1.05 }}
-            className={`relative group rounded-3xl border backdrop-blur-lg bg-gradient-to-br from-[#1a1c2b] to-[#11121a] p-10 transition-all duration-500 shadow-2xl ${
+            className={`relative group rounded-3xl border backdrop-blur-lg bg-gradient-to-br from-[#10131f] to-[#06080f] p-10 transition-all duration-500 shadow-2xl ${
               plan.highlight
-                ? "border-cyan-400 ring-2 ring-cyan-500 shadow-cyan-400/30"
-                : "border-gray-700"
+                ? "border-cyan-500 ring-2 ring-cyan-400/60 shadow-cyan-500/30"
+                : "border-gray-800"
             }`}
           >
             {/* Glow on Hover */}
-            <div className="absolute inset-0 bg-cyan-400/10 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-cyan-400/5 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 pointer-events-none"></div>
 
             {/* Tag Badge */}
-            <div className="absolute -top-4 left-5 bg-gradient-to-r from-purple-500 to-cyan-500 text-xs px-4 py-1 rounded-full font-semibold shadow-md">
+            <div className="absolute -top-4 left-5 bg-gradient-to-r from-gray-800 via-cyan-600 to-purple-700 text-xs px-4 py-1 rounded-full font-semibold shadow-md text-white">
               {plan.tag}
             </div>
 
@@ -121,9 +120,9 @@ const PricingSection = () => {
             </h3>
 
             {/* Price */}
-            <p className="text-5xl font-extrabold mb-6">
+            <p className="text-5xl font-extrabold mb-6 text-white">
               {plan.price}
-              <span className="text-sm font-medium text-gray-400"> /month</span>
+              <span className="text-sm font-medium text-gray-500"> /month</span>
             </p>
 
             {/* Features */}
@@ -145,8 +144,8 @@ const PricingSection = () => {
               }}
               className={`mt-8 w-full py-3 font-semibold rounded-xl text-white transition-all bg-gradient-to-r ${
                 plan.highlight
-                  ? "from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 shadow-cyan-400/30"
-                  : "from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700"
+                  ? "from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 shadow-cyan-500/30"
+                  : "from-[#22242f] to-[#1a1b25] hover:from-[#333544] hover:to-[#292b39]"
               }`}
             >
               {plan.highlight ? "Launch with Pro 🚀" : "Choose Plan"}

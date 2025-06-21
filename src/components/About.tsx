@@ -1,6 +1,5 @@
+"use client";
 
-"use client"
-// import Link from "next/link";
 import { FaCogs, FaChartBar, FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -12,20 +11,21 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.3,
-      delayChildren: 0.2
-    }
-  }
+      delayChildren: 0.2,
+    },
+  },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
+  visible: { opacity: 1, y: 0 },
 };
+
 const teamMembers = [
   {
     name: "Akku Chaudhary",
     role: "Founder & CEO",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg", // Replace with your actual image path
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg",
     bio: "Visionary behind ByteBloom. Passionate about web innovation, AI, and creating products that solve real-world problems.",
   },
   {
@@ -54,220 +54,247 @@ const cards = [
     title: "Advanced Tech Stack",
     description:
       "Built with the latest frameworks and tools like Next.js, Tailwind CSS, and secure APIs for performance-driven results.",
-    glow: "hover:shadow-[0_0_25px_#00c6ff]",
+    glow: "hover:shadow-[0_0_35px_#00c6ff]",
   },
   {
     icon: <FaChartBar className="text-4xl text-[#38ef7d]" />,
     title: "Growth-Oriented Design",
     description:
       "Every interface is crafted to engage users and drive conversions through intuitive, scalable digital experiences.",
-    glow: "hover:shadow-[0_0_25px_#38ef7d]",
+    glow: "hover:shadow-[0_0_35px_#38ef7d]",
   },
   {
     icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
     title: "24/7 Support & Security",
     description:
       "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
-    glow: "hover:shadow-[0_0_25px_#9b5de5]",
+    glow: "hover:shadow-[0_0_35px_#9b5de5]",
+  },
+  {
+    icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
+    title: "24/7 Support & Security",
+    description:
+      "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
+    glow: "hover:shadow-[0_0_35px_#9b5de5]",
+  },
+  {
+    icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
+    title: "24/7 Support & Security",
+    description:
+      "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
+    glow: "hover:shadow-[0_0_35px_#9b5de5]",
+  },
+  {
+    icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
+    title: "24/7 Support & Security",
+    description:
+      "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
+    glow: "hover:shadow-[0_0_35px_#9b5de5]",
   },
 ];
 
 export default function AboutPage() {
   return (
     <motion.main
-      className="bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white font-mono"
+      className="bg-black text-white font-sans overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      {/* Hero Section */}
+    <section className="relative py-28 px-6 md:px-20 text-center bg-black overflow-hidden">
+  {/* Floating Glow Blob */}
+  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[80vw] h-[80vw] rounded-full pointer-events-none animate-pulse" />
+
+  {/* Particle Background */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(0,255,255,0.05),transparent_60%)]" />
+
+  {/* Heading */}
+  <motion.div
+    className="max-w-5xl mx-auto"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-text-glow">
+      ByteBloom: Born to Innovate
+    </h1>
+    <p className="text-xl text-gray-300 leading-relaxed">
+      We don&apos;t just design interfaces — we engineer futuristic journeys.
+    </p>
+  </motion.div>
+
+  {/* Centered Card */}
+  <motion.div
+  className="flex justify-center mt-24"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={{
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  }}
+>
+  <motion.div
+    className="w-full max-w-3xl text-left space-y-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 shadow-xl hover:shadow-cyan-500/10 transition duration-500"
+    whileHover={{ scale: 1.03 }}
+  >
+    <h2 className="text-4xl font-bold text-cyan-300">Our Journey</h2>
+    <p className="text-gray-300 text-lg leading-relaxed">
+      ByteBloom was born from the relentless pursuit of digital brilliance. We are not just coders — we are architects of intelligent experiences, builders of scalable systems, and designers of user joy. What started as a spark has grown into a full-spectrum force of innovation, delivering solutions that turn complexity into clarity, and ambition into action.
+    </p>
+    <p className="text-gray-300 text-base leading-relaxed">
+      Whether you&apos;re a startup chasing scale, an enterprise chasing elegance, or a creator chasing conversion — ByteBloom is your launchpad. We merge creativity, logic, and bleeding-edge tech to engineer digital products that *breathe, move, and grow* with your vision.
+    </p>
+
+    <ul className="space-y-3 text-sm text-gray-200">
+      <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
+        ⚡ <span><strong>Full-Stack Wizards:</strong> Expertly built with MERN, Next.js, and edge technologies.</span>
+      </motion.li>
+      <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
+        🎨 <span><strong>Pixel Precision:</strong> We craft UI/UX that feels alive, intuitive, and unforgettable.</span>
+      </motion.li>
+      <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
+        🧠 <span><strong>Smart by Design:</strong> AI-infused flows that adapt, predict, and perform.</span>
+      </motion.li>
+      <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
+        🚀 <span><strong>Launch-Ready Always:</strong> SEO-focused, performance-optimized, and future-proofed.</span>
+      </motion.li>
+      <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
+        🌐 <span><strong>Cross-Platform Presence:</strong> From web to mobile, our code scales across ecosystems.</span>
+      </motion.li>
+      <motion.li whileHover={{ x: 5 }} className="flex items-center gap-2">
+        🔒 <span><strong>Security First:</strong> Built-in protection at every level — code, data, and user.</span>
+      </motion.li>
+    </ul>
+
+    <p className="text-cyan-200 font-medium text-base mt-4">
+      We don’t just ship projects — we empower movements. Let ByteBloom be your digital revolution.
+    </p>
+  </motion.div>
+</motion.div>
+
+
+  {/* Text Glow Animation */}
+  <style jsx>{`
+    .animate-text-glow {
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 4px silver, 0 0 1px #ccc, 0 0 1px #eee;
+  }
+  50% {
+    text-shadow: 0 0 2px #ddd, 0 0 2px silver, 0 0 2px #ccc;
+  }
+}
+
+  `}</style>
+</section>
+
+
+
+     
+
+     <section className="relative py-28 px-6 md:px-20 overflow-hidden bg-black">
+  {/* BACKGROUND GLOW + PARTICLES */}
+  <div className="absolute inset-0 z-0">
+    <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-[90vw] h-[90vw] bg-cyan-50/5 blur-[220px] rounded-full animate-pulse" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#0f172a33] to-black" />
+  </div>
+
+  {/* HEADING */}
+  <motion.h2
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+    className="text-4xl md:text-6xl font-extrabold text-center mb-20 relative z-10 bg-gradient-to-r from-zinc-900 via-white to-zinc-500 bg-clip-text text-transparent animate-gradient-shimmer"
+  >
+    Why Choose ByteBloom?
+  </motion.h2>
+
+  {/* CARDS GRID */}
+  <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto relative z-10">
+    {cards.map((card, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ scale: 1.05, rotateX: 2, rotateY: 2 }}
+        whileTap={{ scale: 0.97 }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: index * 0.2, ease: "easeOut" }}
+        className={`group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 shadow-2xl transition-transform duration-300 hover:shadow-cyan-500/40 relative overflow-hidden`}
+      >
+        {/* GLOW EDGE */}
+        <div className="absolute inset-0 rounded-3xl border border-cyan-400/20 group-hover:border-cyan-400/40 transition pointer-events-none" />
+
+        {/* SPARKLE ORBS */}
+        <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-500/10 blur-2xl rounded-full group-hover:opacity-80 transition duration-500" />
+
+        {/* CONTENT */}
+        <div className="flex flex-col items-center text-center gap-4 z-10 relative">
+          {card.icon}
+          <h3 className="text-xl font-bold text-white">{card.title}</h3>
+          <p className="text-sm text-gray-300">{card.description}</p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+
+
       <section className="py-24 px-6 md:px-20 text-center">
-        <div className="min-h-screen bg-transparent text-white px-6 py-12">
-     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[60vw] h-[60vw] bg-teal-400/10 blur-[180px] rounded-full pointer-events-none" />
-
-      {/* Intro */}
-      <motion.div
-        className="max-w-4xl mx-auto text-center"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-      >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          About <span className="text-teal-400">ByteBloom</span>
-        </h1>
-        <p className="text-lg text-gray-300 leading-relaxed">
-          ByteBloom is a digital innovation studio transforming businesses through purposeful design, scalable technology, and frictionless user experiences.
-        </p>
-      </motion.div>
-
-      {/* Core Section */}
-      <motion.div
-        className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mt-20"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 0.7 }}
-      >
-        {/* Text Content */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-teal-300 mb-4">
-            Our journey
-          </h2>
-          <p className="text-gray-300 text-base leading-loose mb-6">
-            Born in the Web3 wave, ByteBloom began as a solo venture with a mission: build digital products that are not only functional — but stunning.
-            From startup MVPs to enterprise dashboards, we&apos;ve empowered brands to scale, automate, and connect.
-          </p>
-          <ul className="space-y-3 text-gray-200 text-sm">
-            <li>✅ Clean, scalable frontends (Next.js + Tailwind)</li>
-            <li>✅ Intuitive UX design with performance-first logic</li>
-            <li>✅ Custom backend systems using Node.js & MongoDB</li>
-            <li>✅ Strategic digital presence via SEO & SMM</li>
-          </ul>
-        </div>
-
-        {/* Visual / Feature Card */}
-        {/* <div className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-6 shadow-xl hover:shadow-teal-500/20 transition-all duration-300">
-          <h3 className="text-xl font-semibold mb-4 text-white">Our Tech Stack</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-white/80">
-            {["Next.js", "Tailwind CSS", "Framer Motion", "MongoDB", "Express.js", "Vercel"].map((tech) => (
-              <span
-                key={tech}
-                className="bg-teal-500/20 py-1.5 rounded text-center hover:bg-teal-600/30 transition"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div> */}
-      </motion.div>
-
-      {/* Vision Statement */}
-      <motion.div
-        className="max-w-4xl mx-auto mt-24 text-center"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          Our Mission
-        </h2>
-        <p className="text-lg text-gray-300 leading-relaxed">
-          To empower brands, creators, and startups through beautifully engineered solutions. At ByteBloom, every pixel and function is deliberate — driving growth, engagement, and elegance.
-        </p>
-      </motion.div>
-
-      <motion.div
-        className="max-w-6xl mx-auto mt-20"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-      >
-        <h2 className="text-3xl font-bold mb-10 text-teal-300 text-center">
-          Meet Our Team
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              className="bg-[#1e293b] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={112}
-                  height={112}
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-white">{member.name}</h3>
-              <p className="text-sm text-teal-400">{member.role}</p>
-              <p className="mt-3 text-gray-400 text-sm">{member.bio}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-    </div>
-      </section>
-
-      {/* Mission, Vision, Values */}
-          <div className="py-20 px-6 md:px-20 bg-[#0f0f0f] text-white">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-zinc-500 to-zinc-200 bg-clip-text text-transparent">
-        Why Choose ByteBloom?
-      </h2>
-
-      <div className="grid md:grid-cols-3 gap-10">
-        {cards.map((card, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.2,
-              ease: "easeOut",
-            }}
-            className={`bg-[#1a1a1a]/70 backdrop-blur-md border border-gray-800 rounded-2xl p-6 shadow-xl transition-all duration-300 ${card.glow}`}
-          >
-            <div className="flex flex-col items-center text-center gap-4">
-              {card.icon}
-              <h3 className="text-xl font-semibold">{card.title}</h3>
-              <p className="text-sm text-gray-300">{card.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-
-      {/* Services Section */}
-      <section className="py-24 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto text-center">
-          
-          <motion.h2
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-6xl md:text-6xl font-bold text-gray-100 mb-12"
-          >
-           About our services
-          </motion.h2>
-
-        <Apple/>
-        </div>
-      </section>
-
-      {/* CTA */}
-      {/* <section className="py-20 px-6 md:px-20 text-center bg-gray-950/80">
         <motion.h2
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-white mb-6"
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-bold text-white mb-12 font-mono uppercase"
         >
-          Ready to Bloom with ByteBloom?
+         Our Projects
         </motion.h2>
-        <motion.p
-          variants={itemVariants}
-          className="text-gray-300 max-w-xl mx-auto mb-8"
-        >
-          Whether you need a website, a campaign, or a full brand overhaul, our digital experts are here to make it happen.
-        </motion.p>
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          href="/contact"
-          className="inline-block bg-white text-black font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-gray-200 transition"
-        >
-          Let&apos;s Connect
-        </motion.a>
-      </section> */}
+        <div className="bg-gradient-to-r from-transparent via-neutral-50 to-transparent mt-12 h-[1px] w-full" />
+        <Apple />
+      </section>
+       <motion.section
+        className="py-28 px-6 md:px-20 bg-black/90 text-white"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-teal-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Meet the Minds Behind ByteBloom
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <motion.div
+              key={index}
+              className="bg-[#131313] border border-white/10 rounded-3xl p-6 shadow-xl hover:scale-[1.03] hover:shadow-teal-400/20 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                <Image src={member.image} alt={member.name} width={96} height={96} className="object-cover w-full h-full" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+              <p className="text-sm text-cyan-400">{member.role}</p>
+              <p className="mt-2 text-sm text-gray-400">{member.bio}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
     </motion.main>
   );
 }

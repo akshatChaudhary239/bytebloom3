@@ -1,57 +1,63 @@
 "use client";
-import { JSX, useState } from "react";
+import {  useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import {
-  FaLaptopCode,
-  FaChartLine,
-  FaFeatherAlt,
-  FaTools,
-  FaUserTie,
-} from "react-icons/fa";
+import Image from "next/image";
 
-interface Service {
+interface Project {
   title: string;
   description: string;
-  icon: JSX.Element;
+  image: string;
+  link: string;
 }
 
-const services: Service[] = [
+const projects: Project[] = [
   {
-    title: "Web Development",
+    title: "Next.js SaaS Platform",
     description:
-      "We create high-performance websites with modern technologies to ensure your business stands out online. Mobile responsive, SEO-optimized, and lightning-fast.",
-    icon: <FaLaptopCode />,
+      "A high-performance SaaS platform built with Next.js, Tailwind CSS, and MongoDB. Handles authentication, billing, and dashboard UI.",
+    image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+    link: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
   },
   {
-    title: "Digital Marketing",
+    title: "AI-Powered Blog",
     description:
-      "ByteBloom empowers your brand visibility with expert SEO, social media strategies, and data-driven ad campaigns to increase engagement and revenue.",
-    icon: <FaChartLine />,
+      "An AI-integrated blog platform where users can generate and post content with SEO optimization features and dynamic rendering.",
+      image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+
+    link: "https://ai-blog.vercel.app",
   },
   {
-    title: "Content Writing",
+    title: "E-Commerce Web App",
     description:
-      "Crafting compelling, SEO-friendly, and emotionally resonant content that captures your brand voice and converts readers into customers.",
-    icon: <FaFeatherAlt />,
+      "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
+        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+
+    link: "https://ecommerce-app-demo.vercel.app",
   },
   {
-    title: "Social Media Management",
+    title: "E-Commerce Web App",
     description:
-      "We manage your online presence by creating, publishing, and analyzing content tailored to each platform, keeping your audience engaged and growing.",
-    icon: <FaFeatherAlt />,
+      "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
+        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+
+    link: "https://ecommerce-app-demo.vercel.app",
   },
   {
-    title: "Maintenance & Tools",
+    title: "E-Commerce Web App",
     description:
-      "Ensure your website runs smoothly with regular updates, backups, and performance optimizations to prevent downtime and security risks.",
-    icon: <FaTools />,
+      "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
+        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+
+    link: "https://ecommerce-app-demo.vercel.app",
   },
   {
-    title: "Code Consulting",
+    title: "E-Commerce Web App",
     description:
-      "Get expert advice on architecture, best practices, and optimization to elevate your software quality and development workflow.",
-    icon: <FaUserTie />,
+      "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
+        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+
+    link: "https://ecommerce-app-demo.vercel.app",
   },
 ];
 
@@ -65,21 +71,30 @@ export default function Apple() {
   return (
     <main className="min-h-screen px-6 py-20 text-white font-sans relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10 relative">
-        {services.map((service, index) => (
+        {projects.map((project, index) => (
           <motion.div
             key={index}
             layout
             onClick={() => toggleCard(index)}
-            className="bg-white/5 backdrop-blur-md hover:bg-white/10 hover:shadow-cyan-400/40 hover:shadow-lg rounded-3xl p-6 cursor-pointer transition-all duration-300 min-h-[220px] flex flex-col justify-start border border-white/10"
-            initial={{ borderRadius: "1.5rem" }}
-            animate={{ borderRadius: "1.5rem" }}
+            whileHover={{ scale: 1.05 }}
+            className="relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-300 min-h-[300px] flex flex-col justify-end border border-white/10 shadow-lg group"
           >
-            <motion.div layout="position" className="flex items-center gap-4 mb-4">
-              <div className="text-4xl text-cyan-400 drop-shadow-md">{service.icon}</div>
-              <motion.h2 layout className="text-xl font-semibold tracking-wide">
-                {service.title}
-              </motion.h2>
-            </motion.div>
+            {/* Monochrome background with defined height */}
+            <div className="absolute inset-0 w-full h-full">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={500}
+                height={300}
+                className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-40 transition duration-300"
+              />
+            </div>
+
+            <div className="relative z-10 p-4 backdrop-blur-sm bg-black/30 rounded-b-3xl">
+              <h2 className="text-xl font-semibold tracking-wide text-center">
+                {project.title}
+              </h2>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -108,23 +123,31 @@ export default function Apple() {
               exit={{ opacity: 0, scale: 0.85 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="flex flex-col items-center text-center gap-4 mb-6">
-  <div className="text-5xl text-cyan-400">{services[openIndex].icon}</div>
-  <h2 className="text-2xl font-bold">{services[openIndex].title}</h2>
-</div>
+              <div className="w-full h-52 rounded-xl overflow-hidden mb-6">
+                <Image
+                  src={projects[openIndex].image}
+                  alt={projects[openIndex].title}
+                  width={600}
+                  height={300}
+                  className="object-cover w-full h-full"
+                />
+              </div>
 
-<p className="text-gray-200 text-lg leading-relaxed text-center">
-  {services[openIndex].description}
-</p>
-
-<Link 
-  href="#contact"
-  onClick={() => setOpenIndex(null)}
-  className="mt-6 inline-block text-cyan-300 hover:text-white border border-cyan-300 px-4 py-2 rounded-lg transition"
->
-  Connect
-</Link>
-
+              <div className="text-center">
+                <h2 className="text-2xl font-bold mb-2">{projects[openIndex].title}</h2>
+                <p className="text-gray-200 text-lg leading-relaxed mb-4">
+                  {projects[openIndex].description}
+                </p>
+                <Link
+                  href={projects[openIndex].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpenIndex(null)}
+                  className="inline-block text-cyan-300 hover:text-white border border-cyan-300 px-4 py-2 rounded-lg transition"
+                >
+                  View Project
+                </Link>
+              </div>
             </motion.div>
           </>
         )}

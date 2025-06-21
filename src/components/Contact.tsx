@@ -22,7 +22,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full bg-gradient-to-br from-[#0a0f1d] to-[#141b2d] py-20 px-4 text-white"
+      className="w-full bg-gradient-to-t from-neutral-900 to-neutral-950 py-20 px-4 text-white"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -37,7 +37,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10 bg-[#1c2433] rounded-2xl shadow-xl p-8">
+        <div className="grid md:grid-cols-2 gap-10 bg-[#0e1119] rounded-2xl shadow-xl hover:scale-100 border border-white p-8">
           {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
@@ -47,7 +47,7 @@ export default function ContactSection() {
             className="space-y-5"
           >
             <h3 className="text-2xl font-semibold mb-4">Send us a message</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4  ">
               <input
                 type="text"
                 name="name"
@@ -55,7 +55,7 @@ export default function ContactSection() {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="bg-[#111827] px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-[#111827] px-4 py-3 border border-white  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <input
                 type="email"
@@ -64,7 +64,7 @@ export default function ContactSection() {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="bg-[#111827] px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-[#111827] px-4 py-3 border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <input
@@ -73,7 +73,7 @@ export default function ContactSection() {
               placeholder="Project inquiry"
               value={form.subject}
               onChange={handleChange}
-              className="bg-[#111827] px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-[#111827] px-4 py-3 border border-white rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <textarea
               name="message"
@@ -82,11 +82,11 @@ export default function ContactSection() {
               value={form.message}
               onChange={handleChange}
               required
-              className="bg-[#111827] px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-[#111827] px-4 py-3 border border-white rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button
               type="submit"
-              className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md hover:scale-105 transition-transform duration-300 font-semibold flex items-center justify-center gap-2"
+              className="w-full py-3 border border-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-md hover:scale-105 transition-transform duration-300 font-semibold flex items-center justify-center gap-2"
             >
               <FaEnvelope className="text-white" />
               Send Message
