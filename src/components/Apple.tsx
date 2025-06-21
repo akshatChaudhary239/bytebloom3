@@ -73,12 +73,13 @@ export default function Apple() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10 relative">
         {projects.map((project, index) => (
           <motion.div
-            key={index}
-            layout
-            onClick={() => toggleCard(index)}
-            whileHover={{ scale: 1.05 }}
-            className="relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-300 min-h-[300px] flex flex-col justify-end border border-white/10 shadow-lg group"
-          >
+  key={index}
+  layout
+  onClick={() => toggleCard(index)}
+  whileHover={{ scale: 1.05 }}
+  className="relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-300 min-h-[300px] flex flex-col justify-end border border-white/10 shadow-lg group hover:shadow-gray-500 hover:shadow-lg"
+>
+
             {/* Monochrome background with defined height */}
             <div className="absolute inset-0 w-full h-full">
               <Image
