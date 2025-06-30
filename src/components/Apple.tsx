@@ -23,7 +23,7 @@ const projects: Project[] = [
     title: "AI-Powered Blog",
     description:
       "An AI-integrated blog platform where users can generate and post content with SEO optimization features and dynamic rendering.",
-      image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9XxnkqGKKwYumVcA3yW74WPlD6okGSyjarQ&s",
 
     link: "https://ai-blog.vercel.app",
   },
@@ -31,31 +31,31 @@ const projects: Project[] = [
     title: "E-Commerce Web App",
     description:
       "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
-        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpV0A6Wbva9AwQbDGLaY__9t3-Sbsm2RC_uGJ3e3szuKGfecR3INowYZWT1u_kGA9kDFQ&usqp=CAU",
 
     link: "https://ecommerce-app-demo.vercel.app",
   },
   {
-    title: "E-Commerce Web App",
+    title: "Food ordering app",
     description:
       "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
-        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEFmWIslU0sK9A_QSvFSA_7EyqEJ6Ec_-vQ&s",
 
     link: "https://ecommerce-app-demo.vercel.app",
   },
   {
-    title: "E-Commerce Web App",
+    title: "TheCyberVision",
     description:
       "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
-        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7_vD8KXqcJY1-1qijDmY90Ps5mGV2mfzjCA&s",
 
     link: "https://ecommerce-app-demo.vercel.app",
   },
   {
-    title: "E-Commerce Web App",
+    title: "Carpet manufacturing",
     description:
       "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
-        image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYcfzyg9u_rSy-sMNfNWuMn3tWtQgPWuu24Q&s",
 
     link: "https://ecommerce-app-demo.vercel.app",
   },
