@@ -17,7 +17,7 @@ const projects: Project[] = [
     description:
       "A high-performance SaaS platform built with Next.js, Tailwind CSS, and MongoDB. Handles authentication, billing, and dashboard UI.",
     image: "https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2F8MbtJ4hTAaOk3KPcptqZ&w=3840&q=75",
-    link: "bookshala-2.vercel.app",
+    link: "https://bookshala-2.vercel.app",
   },
   {
     title: "AI-Powered Blog",
@@ -25,7 +25,7 @@ const projects: Project[] = [
       "An AI-integrated blog platform where users can generate and post content with SEO optimization features and dynamic rendering.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9XxnkqGKKwYumVcA3yW74WPlD6okGSyjarQ&s",
 
-    link: "bytebloom3-asoo.vercel.app",
+    link: "https://bytebloom3-asoo.vercel.app",
   },
   {
     title: "E-Commerce Web App",
