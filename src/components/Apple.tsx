@@ -25,7 +25,7 @@ const projects: Project[] = [
       "An AI-integrated blog platform where users can generate and post content with SEO optimization features and dynamic rendering.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9XxnkqGKKwYumVcA3yW74WPlD6okGSyjarQ&s",
 
-    link: "https://ai-blog.vercel.app",
+    link: "bytebloom3-asoo.vercel.app",
   },
   {
     title: "E-Commerce Web App",
@@ -49,7 +49,7 @@ const projects: Project[] = [
       "Responsive and scalable e-commerce application built using MERN stack, featuring real-time cart, checkout, and admin dashboard.",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7_vD8KXqcJY1-1qijDmY90Ps5mGV2mfzjCA&s",
 
-    link: "https://ecommerce-app-demo.vercel.app",
+    link: "https://www.thecybervision.com/",
   },
   {
     title: "Carpet manufacturing",
