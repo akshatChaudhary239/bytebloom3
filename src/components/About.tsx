@@ -72,21 +72,21 @@ const cards = [
   },
   {
     icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
-    title: "24/7 Support & Security",
+    title: "Maintence and growth",
     description:
       "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
     glow: "hover:shadow-[0_0_35px_#9b5de5]",
   },
   {
     icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
-    title: "24/7 Support & Security",
+    title: "Code consulting",
     description:
       "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
     glow: "hover:shadow-[0_0_35px_#9b5de5]",
   },
   {
     icon: <FaShieldAlt className="text-4xl text-[#9b5de5]" />,
-    title: "24/7 Support & Security",
+    title: "Quality content",
     description:
       "ByteBloom ensures real-time monitoring, rapid bug fixes, and enterprise-grade data security with 24/7 availability.",
     glow: "hover:shadow-[0_0_35px_#9b5de5]",
